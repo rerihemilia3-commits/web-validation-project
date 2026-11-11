@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #f5e6d3;
+    color: #493323;
+    text-align: center;
+}
+
+header {
+    background-color: #754c35;
+    color: white;
+    padding: 35px;
+}
+
+main {
+    padding: 60px 20px;
+}
+
+button {
+    background-color: #754c35;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
