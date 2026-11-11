@@ -1,0 +1,34 @@
+name: Website Validation
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  validate-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+
+      - name: Verify HTML page
+        run: test -f home.html
+
+      - name: Verify CSS styles
+        run: test -f main.css
+
+      - name: Verify JavaScript
+        run: test -f app.js
+
+      - name: Check JavaScript syntax
+        run: node --check app.js
+
+      - name: Check page title
+        run: grep -q "Кофейня Aroma" home.html
+
+      - name: Finish validation
+        run: echo "Website validation completed successfully!"
